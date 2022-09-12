@@ -1,23 +1,23 @@
 const mongoose = require("mongoose");
 
-const PostSchema = new mongoose.Schema({
-  title: {
+const RoomSchema = new mongoose.Schema({
+  roomNumber: {
     type: String,
     required: true,
   },
   image: {
     type: String,
-    require: true,
+   
   },
   cloudinaryId: {
     type: String,
-    require: true,
+    
   },
-  caption: {
+  roomType: {
     type: String,
     required: true,
   },
-  likes: {
+  roomRate: {
     type: Number,
     required: true,
   },
@@ -31,5 +31,5 @@ const PostSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("Post", PostSchema);
+module.exports = mongoose.model("Room", RoomSchema);
 //model/Post,schema,collection name with model/post gets post and capitalizes it Posts

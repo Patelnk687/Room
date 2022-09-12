@@ -25,6 +25,34 @@
               <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
             </form>
           </div>
+
+          <!--I added below this --> 
+        
+          <div class="mt-5">
+            <h2>Add a room</h2>
+            <form action="/room/createRoom" enctype="multipart/form-data" method="POST">
+              <div class="mb-3">
+                  <label for="roomNumber" class="form-label" name="roomNumber">Room Number</label>
+                  <input type="text" class="form-control" id="roomNumber" name="roomNumber">
+              </div>
+              <div class="mb-3">
+                <label for="roomType" class="form-label" name="roomType">Room Type</label>
+                <textarea class="form-control" id="roomType" name="roomType"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="roomRate" class="form-label" name="roomRate">Room Rate</label>
+                <textarea class="form-control" id="roomRate" name="roomRate"></textarea>
+              </div>
+              <!-- <div class="mb-3">
+                <label for="imgUpload" class="form-label">Image</label>
+                <input type="file" class="form-control" id="imageUpload" name="file">
+              </div> -->
+              <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+            </form>
+          </div>
+
+
+          <!--I added everything above this --> 
       </div>
       <div class="col-6">
         <ul class="row list-unstyled">
