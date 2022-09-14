@@ -28,8 +28,8 @@ module.exports = {
   },
   createRoom: async (req, res) => {
     try {
-      // Upload image to cloudinary router.post("/createPost", postsController.createPost);
-      //const result = await cloudinary.uploader.upload(req.file.path);
+      Upload image to cloudinary router.post("/createPost", postsController.createPost);
+      const result = await cloudinary.uploader.upload(req.file.path);
 
       await Room.create({
         roomNumber: req.body.roomNumber,

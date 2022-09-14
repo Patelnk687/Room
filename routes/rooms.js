@@ -5,10 +5,12 @@ const postsController = require("../controllers/rooms");
 const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
 //Post Routes - simplified for now
-router.get("/", ensureAuth, postsController.getRoom);
+router.get("/:id", ensureAuth, postsController.getRoom);
 
-router.post("/createRoom", postsController.createRoom);
-router.put("/likeRoom", postsController.likeRoom);
+//router.post("/createRoom", postsController.createRoom);
+router.post("/createRoom", upload.single("file"), postsController.createRoom);
+
+router.put("/likeRoom/:id", postsController.likeRoom);
 
 router.delete("/deleteRoom", postsController.deleteRoom);
 
